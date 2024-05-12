@@ -3,14 +3,14 @@ const UserCounter = require('./models/UserCounter')
 const express = require('express');
 const app = express();
 const path = require('path');
-const port =  5000;
+const port =  process.env.PORT || 5000;
 const mongoDB = require('./db')
 require('dotenv').config();
-// const BASE_URL = process.env.BASE_URL
+const BASE_URL = process.env.BASE_URL
 
 mongoDB();
 app.use((req, res, next)=>{
-  res.setHeader("Access-Control-Allow-Origin", "https://krushi-mitr-backend.vercel.app/");
+  res.setHeader("Access-Control-Allow-Origin", BASE_URL);
   res.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"
