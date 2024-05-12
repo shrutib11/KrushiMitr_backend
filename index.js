@@ -6,7 +6,7 @@ const path = require('path');
 const port =  process.env.PORT || 5000;
 const mongoDB = require('./db')
 require('dotenv').config();
-const BASE_URL = process.env.BASE_URL || "https://krushi-mitr-backend.vercel.app/"
+const BASE_URL = process.env.BASE_URL || "https://krushi-mitr-backend1.vercel.app/"
 
 mongoDB();
 app.use((req, res, next)=>{
