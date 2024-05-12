@@ -20,10 +20,6 @@ app.use((req, res, next)=>{
 
 app.use(express.json());
 
-app.get('/', (req, res) => {
-  res.redirect('/api');
-});
-
 // Serve static files from the 'uploads' directory
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
