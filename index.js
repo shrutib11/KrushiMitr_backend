@@ -10,7 +10,7 @@ require('dotenv').config();
 
 mongoDB();
 app.use((req, res, next)=>{
-  res.setHeader("Access-Control-Allow-Origin", "https://krushi-mitr-frontend.vercel.app/");
+  res.setHeader("Access-Control-Allow-Origin", "https://krushi-mitr-backend.vercel.app/");
   res.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"
